@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{426E030A-94A0-409A-B5D8-C0F62442200F}|WebApiCadastroCurso Dev">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LoginController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
-      <File FileName="Controllers/LoginController.cs" Line="1" Column="1" />
+      <File FileName="Controllers/LoginController.cs" Line="26" Column="15" />
+      <File FileName="Services/TokenServices.cs" Line="26" Column="86" />
+      <File FileName="Startup.cs" Line="10" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebApiCadastroCursoSolucion" expanded="True">
             <Node name="WebApiCadastroCurso" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="LoginController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="DTOs" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>

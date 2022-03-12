@@ -13,6 +13,8 @@ namespace WebApiCadastroCurso
 {
     public class Startup
     {
+        private byte[] key;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,7 +38,7 @@ namespace WebApiCadastroCurso
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };
@@ -47,6 +49,7 @@ namespace WebApiCadastroCurso
                 options.UseSqlServer(Configuration.GetConnectionString("MeuSqlServer"));
             });
 
+            services.AddCors();
             services.AddControllers();
         }
 
@@ -64,6 +67,11 @@ namespace WebApiCadastroCurso
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
 
             app.UseAuthentication();
             app.UseAuthorization();
