@@ -2,45 +2,54 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApiCadastroCurso.DTOs;
 using WebApiCadastroCurso.Models;
-using WebApiCadastroCurso.Services;
-
+using WebApiCadastroCurso.Repository;
+using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
+using System;
 
 namespace WebApiCadastroCurso.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("v1")]
     public class LoginController : ControllerBase
     {
+
         public object TokenService { get; private set; }
 
         [HttpPost]
-        [Route("login")]
-        public ActionResult<dynamic> Authenticate([FromBody] CadastrarUserDTO model)
+        [AllowAnonymous]
+        [Route("/api/v1/auth")]
+        public async Task<IActionResult> Auth([FromBody] User model)
         {
-            var user = new User
+            try
             {
-                Name = model.Name,
-                Email = model.Email,
-                Password = model.Password
+                //uma boa prática seria usar DI (Injeção de dependência)
+                //mas não é o foco do artigo
 
-            };
+                var userExists = CadastraUserCourseRepository.Get(model.Name, model.Email, model.Password, model.Role);
 
-            // Verifica se o usuário existe
-            if (user == null)
-                return NotFound(new { message = "Usuário ou senha inválidos" });
+                if (userExists == null)
+                    return BadRequest(new { Message = "Email e/ou senha está(ão) inválido(s)." });
 
-            // Gera o Token
-            var token = TokenServices.GenerateToken(user);
 
-            // Oculta a senha
-            user.Password = "";
+                if (userExists.Password != model.Password)
+                    return BadRequest(new { Message = "Email e/ou senha está(ão) inválido(s)." });
 
-            // Retorna os dados
-            return new
+
+                var token = AutenticationController.GerarToken();
+
+                return Ok(new
+                {
+                    Token = token,
+                    Usuario = userExists
+                });
+
+            }
+            catch (Exception)
             {
-                user = user,
-                token = token
-            };
+                return BadRequest(new { Message = "Ocorreu algum erro interno na aplicação, por favor tente novamente." });
+            }
         }
     }
 

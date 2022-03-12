@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{426E030A-94A0-409A-B5D8-C0F62442200F}|WebApiCadastroCurso Dev">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/CourseController.cs">
     <Files>
-      <File FileName="Controllers/LoginController.cs" Line="26" Column="15" />
-      <File FileName="Services/TokenServices.cs" Line="26" Column="86" />
-      <File FileName="Startup.cs" Line="10" Column="32" />
+      <File FileName="Controllers/LoginController.cs" Line="4" Column="34" />
+      <File FileName="Controllers/CourseController.cs" Line="17" Column="23" />
+      <File FileName="Startup.cs" Line="34" Column="72" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebApiCadastroCursoSolucion" expanded="True">
             <Node name="WebApiCadastroCurso" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="DTOs" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="CourseController.cs" selected="True" />
+              </Node>
+              <Node name="Repository" expanded="True" />
+              <Node name="Settings" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
