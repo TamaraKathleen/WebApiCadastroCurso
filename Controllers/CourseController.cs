@@ -44,6 +44,18 @@ namespace WebApiCadastroCurso.Controllers
         }
 
         [HttpPost]
+        [Authorize]
+        [Route("/api/v1/user/cadastrar")]
+        public async Task<ActionResult<Course>> PostEmployee(Course course)
+        {
+            _context.Courses.Add(course);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetCourse", new { id = course.Id }, course);
+        }
+
+
+        [HttpPost]
         [Authorize(Roles = "Gerente, Secretaria")]
         [Route("/api/v1/user/atualizar")]
         public async Task<IActionResult> Edit(int id, Course course)
