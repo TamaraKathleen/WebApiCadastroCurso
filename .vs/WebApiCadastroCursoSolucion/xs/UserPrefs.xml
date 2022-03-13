@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{426E030A-94A0-409A-B5D8-C0F62442200F}|WebApiCadastroCurso Dev">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LoginController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/CourseController.cs">
     <Files>
-      <File FileName="Controllers/LoginController.cs" Line="19" Column="25" />
+      <File FileName="Controllers/CourseController.cs" Line="49" Column="55" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,7 +9,7 @@
           <Node name="WebApiCadastroCursoSolucion" expanded="True">
             <Node name="WebApiCadastroCurso" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="LoginController.cs" selected="True" />
+                <Node name="CourseController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="DTOs" expanded="True" />

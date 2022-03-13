@@ -169,3 +169,8 @@
 /Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/WebApiCadastroCurso.RazorTargetAssemblyInfo.cs
 /Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/WebApiCadastroCurso.Views.pdb
+/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/Razor/Views/Teste/Create.cshtml.g.cs
+/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/Razor/Views/Teste/Delete.cshtml.g.cs
+/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/Razor/Views/Teste/Details.cshtml.g.cs
+/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/Razor/Views/Teste/Edit.cshtml.g.cs
+/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/Release/net5.0/Razor/Views/Teste/Index.cshtml.g.cs

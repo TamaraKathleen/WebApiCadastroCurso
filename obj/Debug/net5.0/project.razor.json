@@ -15617,6 +15617,62 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "WebApiCadastroCurso",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Teste/Delete.cshtml",
+      "TargetPath": "Views\\Teste\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Courses/Delete.cshtml",
+      "TargetPath": "Views\\Courses\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Courses/Index.cshtml",
+      "TargetPath": "Views\\Courses\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Teste/Edit.cshtml",
+      "TargetPath": "Views\\Teste\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Teste/Create.cshtml",
+      "TargetPath": "Views\\Teste\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Courses/Details.cshtml",
+      "TargetPath": "Views\\Courses\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Teste/Details.cshtml",
+      "TargetPath": "Views\\Teste\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Teste/Index.cshtml",
+      "TargetPath": "Views\\Teste\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Courses/Create.cshtml",
+      "TargetPath": "Views\\Courses\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/Views/Courses/Edit.cshtml",
+      "TargetPath": "Views\\Courses\\Edit.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

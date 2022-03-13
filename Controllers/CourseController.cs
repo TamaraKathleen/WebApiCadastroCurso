@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiCadastroCurso.Data;
 using WebApiCadastroCurso.Models;
-using WebApiCadastroCurso.Repository;
+
 
 namespace WebApiCadastroCurso.Controllers
 {
@@ -37,10 +36,9 @@ namespace WebApiCadastroCurso.Controllers
 
         public async Task<IActionResult> PorStatus(Status? status)
         {
-           
-
-            var course = await _context.Courses.FirstOrDefaultAsync(m => m.Status == status);
             
+            var course = await _context.Courses.ToListAsync();
+
 
             return Ok(course);
         }
@@ -48,12 +46,15 @@ namespace WebApiCadastroCurso.Controllers
         [HttpPost]
         [Authorize(Roles = "Gerente, Secretaria")]
         [Route("/api/v1/user/atualizar")]
-        public async Task<IActionResult> Edit(int id, [Bind("Titulo,Duracao,Status")] Course course)
+        public async Task<IActionResult> Edit(int id, Course course)
         {
+
             if (id != course.Id)
             {
                 return NotFound();
             }
+
+            _context.Entry(course).State = EntityState.Modified;
 
             if (ModelState.IsValid)
             {
@@ -73,22 +74,30 @@ namespace WebApiCadastroCurso.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                
             }
-            return Ok(course);
+
+           
+            return NoContent();
+
+
         }
 
         [HttpDelete]
         [Authorize(Roles = "Gerente")]
         [Route("/api/v1/user/deletar")]
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var course = await _context.Courses.FindAsync(id);
-            _context.Courses.Remove(course);
+            var deletar = await _context.Courses.FindAsync(id);
+            if (deletar == null)
+            {
+                return NotFound();
+            }
+
+            _context.Courses.Remove(deletar);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            return NoContent();
         }
 
         private bool CourseExists(int id)
