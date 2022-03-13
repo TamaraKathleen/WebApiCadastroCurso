@@ -1,5 +1,7 @@
+using System;
 using Microsoft.EntityFrameworkCore;
 using WebApiCadastroCurso.Models;
+using WebApiCadastroCurso.Repository;
 
 namespace WebApiCadastroCurso.Data
 {
@@ -42,5 +44,9 @@ namespace WebApiCadastroCurso.Data
             });
         }
 
+        public static implicit operator ApplicationContext(CadastraUserCourseRepository v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

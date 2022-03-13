@@ -1,6 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
-using WebApiCadastroCurso.DTOs;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebApiCadastroCurso.Models;
 using WebApiCadastroCurso.Repository;
 using Microsoft.AspNetCore.Authorization;
@@ -9,7 +7,7 @@ using System;
 
 namespace WebApiCadastroCurso.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [ApiController]
     [Route("v1")]
     public class LoginController : ControllerBase
@@ -24,8 +22,6 @@ namespace WebApiCadastroCurso.Controllers
         {
             try
             {
-                //uma boa prática seria usar DI (Injeção de dependência)
-                //mas não é o foco do artigo
 
                 var userExists = CadastraUserCourseRepository.Get(model.Name, model.Email, model.Password, model.Role);
 
