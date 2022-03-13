@@ -13,3 +13,6 @@ Desenvolver um sistema Gerenciador de Cursos onde armazena as seguintes informa�
 
 - O Gerente e a Secretária podem Atualizar o Status de um Curso
 
+
+Obs: Os dados de duração do curso cadastrado está sendo por semana.
+
