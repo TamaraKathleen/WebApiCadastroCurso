@@ -40,7 +40,7 @@ namespace WebApiCadastroCurso.Controllers
             var course = await _context.Courses.Where(x => x.Status.Equals(status)).ToListAsync();
 
 
-            return Ok(course);
+            return Ok(course);  
         }
 
         [HttpPost]
