@@ -21,7 +21,7 @@ namespace WebApiCadastroCurso.Controllers
         }
 
         [HttpGet]
-        [Route("/api/v1/user/courses")]
+        [Route("/api/v1/cursos")]
         [AllowAnonymous]
             
         public async Task<IActionResult> Index()
@@ -31,21 +31,21 @@ namespace WebApiCadastroCurso.Controllers
         }
 
         [HttpGet]
-        [Route("/api/v1/user/status")]
+        [Route("/api/v1/curso/status")]
         [AllowAnonymous]
 
         public async Task<IActionResult> PorStatus(Status? status)
         {
             
-            var course = await _context.Courses.ToListAsync();
+            var course = await _context.Courses.Where(x => x.Status.Equals(status)).ToListAsync();
 
 
-            return Ok(course);
+            return Ok(course);  
         }
 
         [HttpPost]
         [Authorize]
-        [Route("/api/v1/user/cadastrar")]
+        [Route("/api/v1/curso/cadastrar")]
         public async Task<ActionResult<Course>> PostEmployee(Course course)
         {
             _context.Courses.Add(course);
@@ -57,7 +57,7 @@ namespace WebApiCadastroCurso.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Gerente, Secretaria")]
-        [Route("/api/v1/user/atualizar")]
+        [Route("/api/v1/curso/atualizar")]
         public async Task<IActionResult> Edit(int id, Course course)
         {
 
@@ -97,7 +97,7 @@ namespace WebApiCadastroCurso.Controllers
 
         [HttpDelete]
         [Authorize(Roles = "Gerente")]
-        [Route("/api/v1/user/deletar")]
+        [Route("/api/v1/curso/deletar")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var deletar = await _context.Courses.FindAsync(id);
