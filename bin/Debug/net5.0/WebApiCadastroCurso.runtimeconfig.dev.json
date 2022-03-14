@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/Tamara/.dotnet/store/|arch|/|tfm|",
-      "/Users/Tamara/.nuget/packages"
+      "/home/tamara.rocha@sinfonia.corp/.dotnet/store/|arch|/|tfm|",
+      "/home/tamara.rocha@sinfonia.corp/.nuget/packages"
     ]
   }
 }

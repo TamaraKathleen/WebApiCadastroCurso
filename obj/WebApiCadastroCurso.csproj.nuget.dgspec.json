@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/WebApiCadastroCurso.csproj": {}
+    "/home/tamara.rocha@sinfonia.corp/projetosC#/WebApiCadastroCurso/WebApiCadastroCurso.csproj": {}
   },
   "projects": {
-    "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/WebApiCadastroCurso.csproj": {
+    "/home/tamara.rocha@sinfonia.corp/projetosC#/WebApiCadastroCurso/WebApiCadastroCurso.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/WebApiCadastroCurso.csproj",
+        "projectUniqueName": "/home/tamara.rocha@sinfonia.corp/projetosC#/WebApiCadastroCurso/WebApiCadastroCurso.csproj",
         "projectName": "WebApiCadastroCurso",
-        "projectPath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/WebApiCadastroCurso.csproj",
-        "packagesPath": "/Users/Tamara/.nuget/packages/",
-        "outputPath": "/Users/Tamara/Documents/Projetos/WebApiCadastroCurso/obj/",
+        "projectPath": "/home/tamara.rocha@sinfonia.corp/projetosC#/WebApiCadastroCurso/WebApiCadastroCurso.csproj",
+        "packagesPath": "/home/tamara.rocha@sinfonia.corp/.nuget/packages/",
+        "outputPath": "/home/tamara.rocha@sinfonia.corp/projetosC#/WebApiCadastroCurso/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/Tamara/.config/NuGet/NuGet.Config"
+          "/home/tamara.rocha@sinfonia.corp/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -85,6 +85,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[5.0.14, 5.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -93,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.406/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

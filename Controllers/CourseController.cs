@@ -37,7 +37,7 @@ namespace WebApiCadastroCurso.Controllers
         public async Task<IActionResult> PorStatus(Status? status)
         {
             
-            var course = await _context.Courses.ToListAsync();
+            var course = await _context.Courses.Where(x => x.Status.Equals(status)).ToListAsync();
 
 
             return Ok(course);
